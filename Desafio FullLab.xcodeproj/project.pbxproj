@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		11C4F1917A8607C37056E7CA /* Pods_Desafio_FullLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11DF5FFBC44E703760464BBC /* Pods_Desafio_FullLab.framework */; };
+		2C04BA7E1EFAAA4F003024F8 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C04BA7D1EFAAA4F003024F8 /* BaseNavigationController.m */; };
+		2C04BA811EFAAABD003024F8 /* ProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C04BA801EFAAABD003024F8 /* ProductsViewController.m */; };
+		2C04BA8A1EFAAB4B003024F8 /* CategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C04BA891EFAAB4B003024F8 /* CategoriesViewController.m */; };
 		2C7F0ACC1EFA9FBC0008DA99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7F0ACB1EFA9FBC0008DA99 /* main.m */; };
 		2C7F0ACF1EFA9FBC0008DA99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7F0ACE1EFA9FBC0008DA99 /* AppDelegate.m */; };
-		2C7F0AD21EFA9FBC0008DA99 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7F0AD11EFA9FBC0008DA99 /* ViewController.m */; };
 		2C7F0AD51EFA9FBC0008DA99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C7F0AD31EFA9FBC0008DA99 /* Main.storyboard */; };
 		2C7F0AD71EFA9FBC0008DA99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7F0AD61EFA9FBC0008DA99 /* Assets.xcassets */; };
 		2C7F0ADA1EFA9FBC0008DA99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C7F0AD81EFA9FBC0008DA99 /* LaunchScreen.storyboard */; };
@@ -18,12 +20,16 @@
 
 /* Begin PBXFileReference section */
 		11DF5FFBC44E703760464BBC /* Pods_Desafio_FullLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Desafio_FullLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C04BA7C1EFAAA4F003024F8 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		2C04BA7D1EFAAA4F003024F8 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		2C04BA7F1EFAAABD003024F8 /* ProductsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductsViewController.h; sourceTree = "<group>"; };
+		2C04BA801EFAAABD003024F8 /* ProductsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductsViewController.m; sourceTree = "<group>"; };
+		2C04BA881EFAAB4B003024F8 /* CategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesViewController.h; sourceTree = "<group>"; };
+		2C04BA891EFAAB4B003024F8 /* CategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesViewController.m; sourceTree = "<group>"; };
 		2C7F0AC71EFA9FBC0008DA99 /* Desafio FullLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desafio FullLab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7F0ACB1EFA9FBC0008DA99 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2C7F0ACD1EFA9FBC0008DA99 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2C7F0ACE1EFA9FBC0008DA99 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2C7F0AD01EFA9FBC0008DA99 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2C7F0AD11EFA9FBC0008DA99 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2C7F0AD41EFA9FBC0008DA99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C7F0AD61EFA9FBC0008DA99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C7F0AD91EFA9FBC0008DA99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,10 +67,85 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2C04BA791EFAA9F2003024F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C04BA821EFAAAC1003024F8 /* ViewController */,
+				2C04BA841EFAAAE5003024F8 /* Cell */,
+				2C04BA831EFAAAD4003024F8 /* Model */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C04BA7A1EFAA9FC003024F8 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				2C04BA871EFAAB01003024F8 /* ViewController */,
+				2C04BA861EFAAB00003024F8 /* Cell */,
+				2C04BA851EFAAAFF003024F8 /* Model */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		2C04BA7B1EFAAA0C003024F8 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2C04BA7C1EFAAA4F003024F8 /* BaseNavigationController.h */,
+				2C04BA7D1EFAAA4F003024F8 /* BaseNavigationController.m */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		2C04BA821EFAAAC1003024F8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2C04BA7F1EFAAABD003024F8 /* ProductsViewController.h */,
+				2C04BA801EFAAABD003024F8 /* ProductsViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		2C04BA831EFAAAD4003024F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2C04BA841EFAAAE5003024F8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		2C04BA851EFAAAFF003024F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2C04BA861EFAAB00003024F8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		2C04BA871EFAAB01003024F8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2C04BA881EFAAB4B003024F8 /* CategoriesViewController.h */,
+				2C04BA891EFAAB4B003024F8 /* CategoriesViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		2C7F0ABE1EFA9FBC0008DA99 = {
 			isa = PBXGroup;
 			children = (
-				2C7F0AC91EFA9FBC0008DA99 /* Desafio FullLab */,
+				2C7F0AC91EFA9FBC0008DA99 /* Project */,
 				2C7F0AC81EFA9FBC0008DA99 /* Products */,
 				023FEBAE12CFE859F68C46A9 /* Pods */,
 				0D71ECF592A0B6805490FFC8 /* Frameworks */,
@@ -79,16 +160,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2C7F0AC91EFA9FBC0008DA99 /* Desafio FullLab */ = {
+		2C7F0AC91EFA9FBC0008DA99 /* Project */ = {
 			isa = PBXGroup;
 			children = (
 				2C8E000D1EFAA3690061CE0D /* AppDelegate */,
-				2C8E000F1EFAA3A00061CE0D /* ViewController */,
+				2C04BA7B1EFAAA0C003024F8 /* Base */,
+				2C04BA791EFAA9F2003024F8 /* Products */,
+				2C04BA7A1EFAA9FC003024F8 /* Categories */,
 				2C8E000E1EFAA3840061CE0D /* Storyboard */,
 				2C7F0AD61EFA9FBC0008DA99 /* Assets.xcassets */,
 				2C7F0ADB1EFA9FBC0008DA99 /* Info.plist */,
 				2C7F0ACA1EFA9FBC0008DA99 /* Supporting Files */,
 			);
+			name = Project;
 			path = "Desafio FullLab";
 			sourceTree = "<group>";
 		};
@@ -116,15 +200,6 @@
 				2C7F0AD81EFA9FBC0008DA99 /* LaunchScreen.storyboard */,
 			);
 			name = Storyboard;
-			sourceTree = "<group>";
-		};
-		2C8E000F1EFAA3A00061CE0D /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				2C7F0AD01EFA9FBC0008DA99 /* ViewController.h */,
-				2C7F0AD11EFA9FBC0008DA99 /* ViewController.m */,
-			);
-			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,9 +325,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C7F0AD21EFA9FBC0008DA99 /* ViewController.m in Sources */,
 				2C7F0ACF1EFA9FBC0008DA99 /* AppDelegate.m in Sources */,
 				2C7F0ACC1EFA9FBC0008DA99 /* main.m in Sources */,
+				2C04BA811EFAAABD003024F8 /* ProductsViewController.m in Sources */,
+				2C04BA8A1EFAAB4B003024F8 /* CategoriesViewController.m in Sources */,
+				2C04BA7E1EFAAA4F003024F8 /* BaseNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

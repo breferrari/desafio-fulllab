@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CategoriesViewController.h
 //  Desafio FullLab
 //
 //  Created by Brenno Ferrari on 21/06/17.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface CategoriesViewController : UIViewController
 
 @end
-

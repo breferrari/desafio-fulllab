@@ -12,8 +12,7 @@
         <!--Products Navigation Controller-->
         <scene sceneID="V6d-5Z-6yi">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c5T-eV-01f" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController title="Products Navigation Controller" id="9Ji-Yb-FbE" sceneMemberID="viewController">
+                <navigationController title="Products Navigation Controller" id="9Ji-Yb-FbE" customClass="BaseNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Produtos" image="icon-products" id="Jjj-yn-4T4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HZJ-pb-rkf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -23,13 +22,14 @@
                         <segue destination="zAz-L8-3Su" kind="relationship" relationship="rootViewController" id="OD8-01-FAg"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c5T-eV-01f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1782" y="-134"/>
         </scene>
-        <!--Categorias-->
+        <!--Categories-->
         <scene sceneID="MAC-lR-Ip9">
             <objects>
-                <viewController id="MkS-ij-Qce" sceneMemberID="viewController">
+                <viewController id="MkS-ij-Qce" userLabel="Categories" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AbD-w8-CKJ"/>
                         <viewControllerLayoutGuide type="bottom" id="ctY-hH-Bkh"/>
@@ -58,10 +58,10 @@
             </objects>
             <point key="canvasLocation" x="2612" y="519.49025487256381"/>
         </scene>
-        <!--Produtos-->
+        <!--Products-->
         <scene sceneID="aKX-TR-lBY">
             <objects>
-                <viewController id="zAz-L8-3Su" sceneMemberID="viewController">
+                <viewController id="zAz-L8-3Su" userLabel="Products" customClass="ProductsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xxn-cw-XRe"/>
                         <viewControllerLayoutGuide type="bottom" id="jTI-16-GaL"/>
@@ -124,11 +124,10 @@
             </objects>
             <point key="canvasLocation" x="847" y="180"/>
         </scene>
-        <!--Category Navigation Controller-->
+        <!--Categories Navigation Controller-->
         <scene sceneID="Rnl-B6-bXQ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SUQ-Kd-VRE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController title="Category Navigation Controller" id="2xa-KB-Uko" sceneMemberID="viewController">
+                <navigationController title="Category Navigation Controller" id="2xa-KB-Uko" userLabel="Categories Navigation Controller" customClass="BaseNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Categorias" image="icon-category" id="xi4-kF-uCf"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="i6c-Mf-Khp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -138,6 +137,7 @@
                         <segue destination="MkS-ij-Qce" kind="relationship" relationship="rootViewController" id="Qqs-hZ-yNp"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SUQ-Kd-VRE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1782" y="521"/>
         </scene>

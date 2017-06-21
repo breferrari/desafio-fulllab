@@ -1,29 +1,27 @@
 //
-//  ViewController.m
+//  ProductsViewController.m
 //  Desafio FullLab
 //
 //  Created by Brenno Ferrari on 21/06/17.
 //  Copyright © 2017 Brenno Ferrari. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ProductsViewController.h"
 
-@interface ViewController ()
+@interface ProductsViewController ()
 
 @end
 
-@implementation ViewController
+@implementation ProductsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view.
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 @end
