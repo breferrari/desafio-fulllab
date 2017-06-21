@@ -82,13 +82,10 @@
 		2C7F0AC91EFA9FBC0008DA99 /* Desafio FullLab */ = {
 			isa = PBXGroup;
 			children = (
-				2C7F0ACD1EFA9FBC0008DA99 /* AppDelegate.h */,
-				2C7F0ACE1EFA9FBC0008DA99 /* AppDelegate.m */,
-				2C7F0AD01EFA9FBC0008DA99 /* ViewController.h */,
-				2C7F0AD11EFA9FBC0008DA99 /* ViewController.m */,
-				2C7F0AD31EFA9FBC0008DA99 /* Main.storyboard */,
+				2C8E000D1EFAA3690061CE0D /* AppDelegate */,
+				2C8E000F1EFAA3A00061CE0D /* ViewController */,
+				2C8E000E1EFAA3840061CE0D /* Storyboard */,
 				2C7F0AD61EFA9FBC0008DA99 /* Assets.xcassets */,
-				2C7F0AD81EFA9FBC0008DA99 /* LaunchScreen.storyboard */,
 				2C7F0ADB1EFA9FBC0008DA99 /* Info.plist */,
 				2C7F0ACA1EFA9FBC0008DA99 /* Supporting Files */,
 			);
@@ -101,6 +98,33 @@
 				2C7F0ACB1EFA9FBC0008DA99 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C8E000D1EFAA3690061CE0D /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				2C7F0ACD1EFA9FBC0008DA99 /* AppDelegate.h */,
+				2C7F0ACE1EFA9FBC0008DA99 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		2C8E000E1EFAA3840061CE0D /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				2C7F0AD31EFA9FBC0008DA99 /* Main.storyboard */,
+				2C7F0AD81EFA9FBC0008DA99 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		2C8E000F1EFAA3A00061CE0D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2C7F0AD01EFA9FBC0008DA99 /* ViewController.h */,
+				2C7F0AD11EFA9FBC0008DA99 /* ViewController.m */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,6 +413,7 @@
 				2C7F0AE01EFA9FBC0008DA99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
