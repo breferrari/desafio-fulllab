@@ -15,7 +15,12 @@
   onSuccess:(void (^)(NSURLSessionDataTask* task, id responseObject))success
   onFailure:(void (^)(NSURLSessionDataTask* task, NSError* error))failure {
     AFHTTPSessionManager* manager = [AFHTTPSessionManager new];
-    manager.securityPolicy.allowInvalidCertificates = YES;
+    
+    AFSecurityPolicy *securityPolicy = [AFSecurityPolicy new];
+    securityPolicy.allowInvalidCertificates = YES;
+    securityPolicy.validatesDomainName = NO;
+    
+    manager.securityPolicy = securityPolicy;
     
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
@@ -32,7 +37,12 @@
    onSuccess:(void (^)(NSURLSessionDataTask* task, id responseObject))success
    onFailure:(void (^)(NSURLSessionDataTask* task, NSError* error))failure {
     AFHTTPSessionManager* manager = [AFHTTPSessionManager new];
-    manager.securityPolicy.allowInvalidCertificates = YES;
+    
+    AFSecurityPolicy *securityPolicy = [AFSecurityPolicy new];
+    securityPolicy.allowInvalidCertificates = YES;
+    securityPolicy.validatesDomainName = NO;
+    
+    manager.securityPolicy = securityPolicy;
     
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
@@ -49,7 +59,12 @@
     onSuccess:(void (^)(NSURLSessionDataTask* task, id responseObject))success
     onFailure:(void (^)(NSURLSessionDataTask* task, NSError* error))failure {
     AFHTTPSessionManager* manager = [AFHTTPSessionManager new];
-    manager.securityPolicy.allowInvalidCertificates = YES;
+    
+    AFSecurityPolicy *securityPolicy = [AFSecurityPolicy new];
+    securityPolicy.allowInvalidCertificates = YES;
+    securityPolicy.validatesDomainName = NO;
+    
+    manager.securityPolicy = securityPolicy;
     
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
@@ -65,7 +80,12 @@
   onSuccess:(void (^)(NSURLSessionDataTask* task, id responseObject))success
   onFailure:(void (^)(NSURLSessionDataTask* task, NSError* error))failure {
     AFHTTPSessionManager* manager = [AFHTTPSessionManager new];
-    manager.securityPolicy.allowInvalidCertificates = YES;
+    
+    AFSecurityPolicy *securityPolicy = [AFSecurityPolicy new];
+    securityPolicy.allowInvalidCertificates = YES;
+    securityPolicy.validatesDomainName = NO;
+    
+    manager.securityPolicy = securityPolicy;
     
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
@@ -82,7 +102,12 @@
      onFailure:(void (^)(NSURLSessionDataTask* task, NSError* error))failure {
     
     AFHTTPSessionManager* manager = [AFHTTPSessionManager new];
-    manager.securityPolicy.allowInvalidCertificates = YES;
+    
+    AFSecurityPolicy *securityPolicy = [AFSecurityPolicy new];
+    securityPolicy.allowInvalidCertificates = YES;
+    securityPolicy.validatesDomainName = NO;
+    
+    manager.securityPolicy = securityPolicy;
     
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
