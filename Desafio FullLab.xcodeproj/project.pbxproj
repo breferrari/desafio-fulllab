@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11C4F1917A8607C37056E7CA /* Pods_Desafio_FullLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11DF5FFBC44E703760464BBC /* Pods_Desafio_FullLab.framework */; };
 		2C7F0ACC1EFA9FBC0008DA99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7F0ACB1EFA9FBC0008DA99 /* main.m */; };
 		2C7F0ACF1EFA9FBC0008DA99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7F0ACE1EFA9FBC0008DA99 /* AppDelegate.m */; };
 		2C7F0AD21EFA9FBC0008DA99 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7F0AD11EFA9FBC0008DA99 /* ViewController.m */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11DF5FFBC44E703760464BBC /* Pods_Desafio_FullLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Desafio_FullLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7F0AC71EFA9FBC0008DA99 /* Desafio FullLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desafio FullLab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7F0ACB1EFA9FBC0008DA99 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2C7F0ACD1EFA9FBC0008DA99 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		2C7F0AD61EFA9FBC0008DA99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C7F0AD91EFA9FBC0008DA99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C7F0ADB1EFA9FBC0008DA99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0D87DC576C97074EEFD2F92 /* Pods-Desafio FullLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio FullLab.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Desafio FullLab/Pods-Desafio FullLab.debug.xcconfig"; sourceTree = "<group>"; };
+		B617F4C67D3E0496E48C86DE /* Pods-Desafio FullLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio FullLab.release.xcconfig"; path = "Pods/Target Support Files/Pods-Desafio FullLab/Pods-Desafio FullLab.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11C4F1917A8607C37056E7CA /* Pods_Desafio_FullLab.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		023FEBAE12CFE859F68C46A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0D87DC576C97074EEFD2F92 /* Pods-Desafio FullLab.debug.xcconfig */,
+				B617F4C67D3E0496E48C86DE /* Pods-Desafio FullLab.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		0D71ECF592A0B6805490FFC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11DF5FFBC44E703760464BBC /* Pods_Desafio_FullLab.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2C7F0ABE1EFA9FBC0008DA99 = {
 			isa = PBXGroup;
 			children = (
 				2C7F0AC91EFA9FBC0008DA99 /* Desafio FullLab */,
 				2C7F0AC81EFA9FBC0008DA99 /* Products */,
+				023FEBAE12CFE859F68C46A9 /* Pods */,
+				0D71ECF592A0B6805490FFC8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C7F0ADE1EFA9FBC0008DA99 /* Build configuration list for PBXNativeTarget "Desafio FullLab" */;
 			buildPhases = (
+				83244FE8EE822FF1F019E2DC /* [CP] Check Pods Manifest.lock */,
 				2C7F0AC31EFA9FBC0008DA99 /* Sources */,
 				2C7F0AC41EFA9FBC0008DA99 /* Frameworks */,
 				2C7F0AC51EFA9FBC0008DA99 /* Resources */,
+				1CCEB61C3C04CD4A6CA8130E /* [CP] Embed Pods Frameworks */,
+				0E9A8FF81ED310EA5910E79C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,6 +172,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E9A8FF81ED310EA5910E79C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Desafio FullLab/Pods-Desafio FullLab-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1CCEB61C3C04CD4A6CA8130E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Desafio FullLab/Pods-Desafio FullLab-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83244FE8EE822FF1F019E2DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2C7F0AC31EFA9FBC0008DA99 /* Sources */ = {
@@ -271,6 +346,7 @@
 		};
 		2C7F0ADF1EFA9FBC0008DA99 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0D87DC576C97074EEFD2F92 /* Pods-Desafio FullLab.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HATQPXT843;
@@ -283,6 +359,7 @@
 		};
 		2C7F0AE01EFA9FBC0008DA99 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B617F4C67D3E0496E48C86DE /* Pods-Desafio FullLab.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HATQPXT843;
