@@ -11,6 +11,11 @@
 		2C04BA7E1EFAAA4F003024F8 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C04BA7D1EFAAA4F003024F8 /* BaseNavigationController.m */; };
 		2C04BA811EFAAABD003024F8 /* ProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C04BA801EFAAABD003024F8 /* ProductsViewController.m */; };
 		2C04BA8A1EFAAB4B003024F8 /* CategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C04BA891EFAAB4B003024F8 /* CategoriesViewController.m */; };
+		2C04BA8E1EFAAC26003024F8 /* REST.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C04BA8D1EFAAC26003024F8 /* REST.m */; };
+		2C04BA921EFAAC41003024F8 /* FulllabService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C04BA911EFAAC41003024F8 /* FulllabService.m */; };
+		2C04BA951EFAAC6B003024F8 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C04BA941EFAAC6B003024F8 /* Product.m */; };
+		2C04BA981EFAAC7A003024F8 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C04BA971EFAAC7A003024F8 /* Category.m */; };
+		2C04BA9D1EFAACBA003024F8 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C04BA9C1EFAACBA003024F8 /* BaseModel.m */; };
 		2C7F0ACC1EFA9FBC0008DA99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7F0ACB1EFA9FBC0008DA99 /* main.m */; };
 		2C7F0ACF1EFA9FBC0008DA99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7F0ACE1EFA9FBC0008DA99 /* AppDelegate.m */; };
 		2C7F0AD51EFA9FBC0008DA99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C7F0AD31EFA9FBC0008DA99 /* Main.storyboard */; };
@@ -26,6 +31,16 @@
 		2C04BA801EFAAABD003024F8 /* ProductsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductsViewController.m; sourceTree = "<group>"; };
 		2C04BA881EFAAB4B003024F8 /* CategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesViewController.h; sourceTree = "<group>"; };
 		2C04BA891EFAAB4B003024F8 /* CategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesViewController.m; sourceTree = "<group>"; };
+		2C04BA8C1EFAAC26003024F8 /* REST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REST.h; sourceTree = "<group>"; };
+		2C04BA8D1EFAAC26003024F8 /* REST.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REST.m; sourceTree = "<group>"; };
+		2C04BA901EFAAC41003024F8 /* FulllabService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FulllabService.h; sourceTree = "<group>"; };
+		2C04BA911EFAAC41003024F8 /* FulllabService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FulllabService.m; sourceTree = "<group>"; };
+		2C04BA931EFAAC6B003024F8 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
+		2C04BA941EFAAC6B003024F8 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
+		2C04BA961EFAAC7A003024F8 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
+		2C04BA971EFAAC7A003024F8 /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
+		2C04BA9B1EFAACBA003024F8 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		2C04BA9C1EFAACBA003024F8 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		2C7F0AC71EFA9FBC0008DA99 /* Desafio FullLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desafio FullLab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7F0ACB1EFA9FBC0008DA99 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2C7F0ACD1EFA9FBC0008DA99 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,8 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				2C04BA821EFAAAC1003024F8 /* ViewController */,
-				2C04BA841EFAAAE5003024F8 /* Cell */,
-				2C04BA831EFAAAD4003024F8 /* Model */,
+				2C04BA841EFAAAE5003024F8 /* Cells */,
+				2C04BA831EFAAAD4003024F8 /* Models */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,8 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				2C04BA871EFAAB01003024F8 /* ViewController */,
-				2C04BA861EFAAB00003024F8 /* Cell */,
-				2C04BA851EFAAAFF003024F8 /* Model */,
+				2C04BA861EFAAB00003024F8 /* Cells */,
+				2C04BA851EFAAAFF003024F8 /* Models */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -90,8 +105,8 @@
 		2C04BA7B1EFAAA0C003024F8 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				2C04BA7C1EFAAA4F003024F8 /* BaseNavigationController.h */,
-				2C04BA7D1EFAAA4F003024F8 /* BaseNavigationController.m */,
+				2C04BA991EFAAC82003024F8 /* NavigationController */,
+				2C04BA9A1EFAAC8B003024F8 /* Models */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -105,32 +120,36 @@
 			name = ViewController;
 			sourceTree = "<group>";
 		};
-		2C04BA831EFAAAD4003024F8 /* Model */ = {
+		2C04BA831EFAAAD4003024F8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2C04BA931EFAAC6B003024F8 /* Product.h */,
+				2C04BA941EFAAC6B003024F8 /* Product.m */,
 			);
-			name = Model;
+			name = Models;
 			sourceTree = "<group>";
 		};
-		2C04BA841EFAAAE5003024F8 /* Cell */ = {
+		2C04BA841EFAAAE5003024F8 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Cell;
+			name = Cells;
 			sourceTree = "<group>";
 		};
-		2C04BA851EFAAAFF003024F8 /* Model */ = {
+		2C04BA851EFAAAFF003024F8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2C04BA961EFAAC7A003024F8 /* Category.h */,
+				2C04BA971EFAAC7A003024F8 /* Category.m */,
 			);
-			name = Model;
+			name = Models;
 			sourceTree = "<group>";
 		};
-		2C04BA861EFAAB00003024F8 /* Cell */ = {
+		2C04BA861EFAAB00003024F8 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Cell;
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		2C04BA871EFAAB01003024F8 /* ViewController */ = {
@@ -140,6 +159,43 @@
 				2C04BA891EFAAB4B003024F8 /* CategoriesViewController.m */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		2C04BA8B1EFAAC0E003024F8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2C04BA8F1EFAAC2E003024F8 /* REST */,
+				2C04BA901EFAAC41003024F8 /* FulllabService.h */,
+				2C04BA911EFAAC41003024F8 /* FulllabService.m */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		2C04BA8F1EFAAC2E003024F8 /* REST */ = {
+			isa = PBXGroup;
+			children = (
+				2C04BA8C1EFAAC26003024F8 /* REST.h */,
+				2C04BA8D1EFAAC26003024F8 /* REST.m */,
+			);
+			name = REST;
+			sourceTree = "<group>";
+		};
+		2C04BA991EFAAC82003024F8 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				2C04BA7C1EFAAA4F003024F8 /* BaseNavigationController.h */,
+				2C04BA7D1EFAAA4F003024F8 /* BaseNavigationController.m */,
+			);
+			name = NavigationController;
+			sourceTree = "<group>";
+		};
+		2C04BA9A1EFAAC8B003024F8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2C04BA9B1EFAACBA003024F8 /* BaseModel.h */,
+				2C04BA9C1EFAACBA003024F8 /* BaseModel.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		2C7F0ABE1EFA9FBC0008DA99 = {
@@ -164,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				2C8E000D1EFAA3690061CE0D /* AppDelegate */,
+				2C04BA8B1EFAAC0E003024F8 /* Service */,
 				2C04BA7B1EFAAA0C003024F8 /* Base */,
 				2C04BA791EFAA9F2003024F8 /* Products */,
 				2C04BA7A1EFAA9FC003024F8 /* Categories */,
@@ -326,10 +383,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C7F0ACF1EFA9FBC0008DA99 /* AppDelegate.m in Sources */,
+				2C04BA981EFAAC7A003024F8 /* Category.m in Sources */,
 				2C7F0ACC1EFA9FBC0008DA99 /* main.m in Sources */,
 				2C04BA811EFAAABD003024F8 /* ProductsViewController.m in Sources */,
+				2C04BA8E1EFAAC26003024F8 /* REST.m in Sources */,
 				2C04BA8A1EFAAB4B003024F8 /* CategoriesViewController.m in Sources */,
+				2C04BA951EFAAC6B003024F8 /* Product.m in Sources */,
 				2C04BA7E1EFAAA4F003024F8 /* BaseNavigationController.m in Sources */,
+				2C04BA9D1EFAACBA003024F8 /* BaseModel.m in Sources */,
+				2C04BA921EFAAC41003024F8 /* FulllabService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
