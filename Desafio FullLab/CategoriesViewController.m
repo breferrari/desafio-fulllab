@@ -8,6 +8,8 @@
 
 #import "CategoriesViewController.h"
 
+#import "FulllabService.h"
+
 @interface CategoriesViewController ()
 
 @end
@@ -16,7 +18,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [FulllabService getCategories:^(NSArray<Category *> *categories, NSError *error) {
+        NSLog(@"Complete");
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -18,12 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [FulllabService queryProducts:nil
-                           offset:0
-                             size:10
-                         complete:^(NSArray<Product *> *products, NSError *error) {
-                             NSLog(@"Complete");
-                             }];
+//    [FulllabService queryProducts:nil
+//                           offset:0
+//                             size:10
+//                         complete:^(NSArray<Product *> *products, NSError *error) {
+//                             NSLog(@"Complete");
+//                             }];
     
 }
 

@@ -10,5 +10,10 @@
 
 @interface Category : BaseModel
 
+@property (strong, nonatomic) NSString *categoryId;
+@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *imageUrl;
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 @end

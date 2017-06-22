@@ -29,7 +29,7 @@
         <!--Categories-->
         <scene sceneID="MAC-lR-Ip9">
             <objects>
-                <viewController id="MkS-ij-Qce" userLabel="Categories" sceneMemberID="viewController">
+                <viewController id="MkS-ij-Qce" userLabel="Categories" customClass="CategoriesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AbD-w8-CKJ"/>
                         <viewControllerLayoutGuide type="bottom" id="ctY-hH-Bkh"/>

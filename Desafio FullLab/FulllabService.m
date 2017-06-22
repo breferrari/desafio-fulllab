@@ -73,7 +73,7 @@ parameters:(NSDictionary *) parameters
                                  };
     
     NSLog(@"[Fulllab Service] POST Request: %@", URLString);
-    NSLog(@"[HomerService] Querying products...");
+    NSLog(@"[Fulllab Service] Querying products...");
     
     [FulllabService POST:URLString parameters:parameters complete:^(id response, NSError *error) {
         if (!error && response) {
@@ -94,6 +94,33 @@ parameters:(NSDictionary *) parameters
         }
     }];
     
+}
+
++ (void)getCategories:(ServiceResultCategoriesBlock)complete {
+    
+    NSString *URLString = @"/StorePreference/CategoryTree";
+    
+    NSLog(@"[Fulllab Service] GET Request: %@", URLString);
+    NSLog(@"[Fulllab Service] Finding categories...");
+    
+    [FulllabService GET:URLString parameters:nil complete:^(id response, NSError *error) {
+        if (!error && response) {
+            NSDictionary *responseDictionary = response;
+            NSArray<NSDictionary *> *categoryDictionaryArray = [responseDictionary valueForKey:@"Categories"];
+            
+            NSMutableArray<Category *> *categoryArray = [NSMutableArray new];
+            
+            for (NSDictionary *categoryDicitionary in categoryDictionaryArray) {
+                Category *category = [Category newWithDictionary:categoryDicitionary];
+                [categoryArray addObject:category];
+            }
+            
+            complete(categoryArray, nil);
+        } else {
+            NSLog(@"[Fulllab Service] Error @ GET Request: %@", URLString);
+            complete(nil, error);
+        }
+    }];
 }
 
 @end

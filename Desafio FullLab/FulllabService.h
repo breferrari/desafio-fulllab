@@ -25,4 +25,6 @@ typedef void (^ServiceResultCategoriesBlock)(NSArray<Category *> *categories, NS
                  size:(NSInteger)size
              complete:(ServiceResultProductsBlock)complete;
 
++ (void)getCategories:(ServiceResultCategoriesBlock)complete;
+
 @end
