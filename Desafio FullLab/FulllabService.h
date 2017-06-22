@@ -10,6 +10,8 @@
 
 #import "REST.h"
 
+typedef void (^ServiceResultBlock)(id response, NSError *error);
+
 @interface FulllabService : NSObject
 
 @end
