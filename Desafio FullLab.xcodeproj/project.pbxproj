@@ -21,6 +21,12 @@
 		2C7F0AD51EFA9FBC0008DA99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C7F0AD31EFA9FBC0008DA99 /* Main.storyboard */; };
 		2C7F0AD71EFA9FBC0008DA99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7F0AD61EFA9FBC0008DA99 /* Assets.xcassets */; };
 		2C7F0ADA1EFA9FBC0008DA99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C7F0AD81EFA9FBC0008DA99 /* LaunchScreen.storyboard */; };
+		2C9EED7B1EFBD05D002FD2AA /* ProductSku.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EED7A1EFBD05D002FD2AA /* ProductSku.m */; };
+		2C9EED7E1EFBD0ED002FD2AA /* ProductSpecifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EED7D1EFBD0ED002FD2AA /* ProductSpecifications.m */; };
+		2C9EED811EFBD299002FD2AA /* ProductSkuSeller.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EED801EFBD299002FD2AA /* ProductSkuSeller.m */; };
+		2C9EED841EFBD2E4002FD2AA /* ProductSkuImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EED831EFBD2E4002FD2AA /* ProductSkuImage.m */; };
+		2C9EED881EFBD333002FD2AA /* ProductSkuVariations.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EED871EFBD333002FD2AA /* ProductSkuVariations.m */; };
+		2C9EED8B1EFBD481002FD2AA /* ProductSkuReferenceId.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EED8A1EFBD481002FD2AA /* ProductSkuReferenceId.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +55,18 @@
 		2C7F0AD61EFA9FBC0008DA99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C7F0AD91EFA9FBC0008DA99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C7F0ADB1EFA9FBC0008DA99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C9EED791EFBD05D002FD2AA /* ProductSku.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductSku.h; sourceTree = "<group>"; };
+		2C9EED7A1EFBD05D002FD2AA /* ProductSku.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductSku.m; sourceTree = "<group>"; };
+		2C9EED7C1EFBD0ED002FD2AA /* ProductSpecifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductSpecifications.h; sourceTree = "<group>"; };
+		2C9EED7D1EFBD0ED002FD2AA /* ProductSpecifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductSpecifications.m; sourceTree = "<group>"; };
+		2C9EED7F1EFBD299002FD2AA /* ProductSkuSeller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductSkuSeller.h; sourceTree = "<group>"; };
+		2C9EED801EFBD299002FD2AA /* ProductSkuSeller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductSkuSeller.m; sourceTree = "<group>"; };
+		2C9EED821EFBD2E4002FD2AA /* ProductSkuImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductSkuImage.h; sourceTree = "<group>"; };
+		2C9EED831EFBD2E4002FD2AA /* ProductSkuImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductSkuImage.m; sourceTree = "<group>"; };
+		2C9EED861EFBD333002FD2AA /* ProductSkuVariations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductSkuVariations.h; sourceTree = "<group>"; };
+		2C9EED871EFBD333002FD2AA /* ProductSkuVariations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductSkuVariations.m; sourceTree = "<group>"; };
+		2C9EED891EFBD481002FD2AA /* ProductSkuReferenceId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductSkuReferenceId.h; sourceTree = "<group>"; };
+		2C9EED8A1EFBD481002FD2AA /* ProductSkuReferenceId.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductSkuReferenceId.m; sourceTree = "<group>"; };
 		B0D87DC576C97074EEFD2F92 /* Pods-Desafio FullLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio FullLab.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Desafio FullLab/Pods-Desafio FullLab.debug.xcconfig"; sourceTree = "<group>"; };
 		B617F4C67D3E0496E48C86DE /* Pods-Desafio FullLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio FullLab.release.xcconfig"; path = "Pods/Target Support Files/Pods-Desafio FullLab/Pods-Desafio FullLab.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +143,18 @@
 			children = (
 				2C04BA931EFAAC6B003024F8 /* Product.h */,
 				2C04BA941EFAAC6B003024F8 /* Product.m */,
+				2C9EED791EFBD05D002FD2AA /* ProductSku.h */,
+				2C9EED7A1EFBD05D002FD2AA /* ProductSku.m */,
+				2C9EED7F1EFBD299002FD2AA /* ProductSkuSeller.h */,
+				2C9EED801EFBD299002FD2AA /* ProductSkuSeller.m */,
+				2C9EED821EFBD2E4002FD2AA /* ProductSkuImage.h */,
+				2C9EED831EFBD2E4002FD2AA /* ProductSkuImage.m */,
+				2C9EED861EFBD333002FD2AA /* ProductSkuVariations.h */,
+				2C9EED871EFBD333002FD2AA /* ProductSkuVariations.m */,
+				2C9EED891EFBD481002FD2AA /* ProductSkuReferenceId.h */,
+				2C9EED8A1EFBD481002FD2AA /* ProductSkuReferenceId.m */,
+				2C9EED7C1EFBD0ED002FD2AA /* ProductSpecifications.h */,
+				2C9EED7D1EFBD0ED002FD2AA /* ProductSpecifications.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -382,11 +412,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C9EED7B1EFBD05D002FD2AA /* ProductSku.m in Sources */,
 				2C7F0ACF1EFA9FBC0008DA99 /* AppDelegate.m in Sources */,
+				2C9EED8B1EFBD481002FD2AA /* ProductSkuReferenceId.m in Sources */,
 				2C04BA981EFAAC7A003024F8 /* Category.m in Sources */,
+				2C9EED881EFBD333002FD2AA /* ProductSkuVariations.m in Sources */,
+				2C9EED7E1EFBD0ED002FD2AA /* ProductSpecifications.m in Sources */,
 				2C7F0ACC1EFA9FBC0008DA99 /* main.m in Sources */,
+				2C9EED841EFBD2E4002FD2AA /* ProductSkuImage.m in Sources */,
 				2C04BA811EFAAABD003024F8 /* ProductsViewController.m in Sources */,
 				2C04BA8E1EFAAC26003024F8 /* REST.m in Sources */,
+				2C9EED811EFBD299002FD2AA /* ProductSkuSeller.m in Sources */,
 				2C04BA8A1EFAAB4B003024F8 /* CategoriesViewController.m in Sources */,
 				2C04BA951EFAAC6B003024F8 /* Product.m in Sources */,
 				2C04BA7E1EFAAA4F003024F8 /* BaseNavigationController.m in Sources */,

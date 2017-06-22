@@ -8,7 +8,7 @@
 
 #import "FulllabService.h"
 
-static NSString const *BASE_SERVICE_URL = @"https://desafio.mobfiq.com.br/";
+static NSString * const BASE_SERVICE_URL = @"https://desafio.mobfiq.com.br/";
 
 @implementation FulllabService
 
@@ -63,6 +63,9 @@ parameters:(NSDictionary *) parameters
     
     NSString *URLString = @"/Search/Criteria";
     
+    if (!query)
+        query = @"";
+    
     NSDictionary *parameters = @{
                                  @"Query"  : query,
                                  @"Offset" : [@(offset) stringValue],
@@ -74,7 +77,12 @@ parameters:(NSDictionary *) parameters
     
     [FulllabService POST:URLString parameters:parameters complete:^(id response, NSError *error) {
         if (!error && response) {
+            NSDictionary *responseDictionary = response;
+            NSArray<NSDictionary *> *productDictionaryArray = [responseDictionary valueForKey:@"Products"];
             
+            for (NSDictionary *productDictionary in productDictionaryArray) {
+                NSLog(@"Name: %@", [productDictionary valueForKey:@"Name"]);
+            }
         } else {
             NSLog(@"[Fulllab Service] Error @ POST Request: %@", URLString);
             complete(nil, error);
