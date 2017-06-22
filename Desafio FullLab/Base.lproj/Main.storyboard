@@ -86,16 +86,11 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Qsi-Ao-AKR">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="zAz-L8-3Su" id="DWw-Ni-DX6"/>
+                                    <outlet property="delegate" destination="zAz-L8-3Su" id="FUP-8a-bal"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -108,6 +103,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Produtos" image="icon-products" id="z2r-bD-SPT"/>
                     <navigationItem key="navigationItem" title="Produtos" id="AM0-kE-RdR"/>
+                    <connections>
+                        <outlet property="collectionView" destination="wni-3y-zjM" id="lVz-nh-TGJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lvw-K2-SxP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

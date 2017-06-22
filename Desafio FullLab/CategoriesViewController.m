@@ -35,7 +35,7 @@
     
     [weakSelf showLoadingHUD];
     [FulllabService getCategories:^(NSArray<Category *> *categories, NSError *error) {
-        if (error) {
+        if (error || !categories) {
             NSLog(@"[CategoriesViewController] Error loading categories");
             [weakSelf hideLoadingHUD];
             return;

@@ -24,7 +24,7 @@
     return @"CategoryCell";
 }
 
-#pragma mark - Life cycle
+#pragma mark - Lifecycle
 
 - (void)awakeFromNib {
     [super awakeFromNib];

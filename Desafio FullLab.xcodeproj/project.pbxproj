@@ -16,6 +16,8 @@
 		2C04BA951EFAAC6B003024F8 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C04BA941EFAAC6B003024F8 /* Product.m */; };
 		2C04BA981EFAAC7A003024F8 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C04BA971EFAAC7A003024F8 /* Category.m */; };
 		2C04BA9D1EFAACBA003024F8 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C04BA9C1EFAACBA003024F8 /* BaseModel.m */; };
+		2C314F381EFC8A600063D828 /* ProductCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C314F361EFC8A600063D828 /* ProductCollectionViewCell.m */; };
+		2C314F391EFC8A600063D828 /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C314F371EFC8A600063D828 /* ProductCollectionViewCell.xib */; };
 		2C7F0ACC1EFA9FBC0008DA99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7F0ACB1EFA9FBC0008DA99 /* main.m */; };
 		2C7F0ACF1EFA9FBC0008DA99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7F0ACE1EFA9FBC0008DA99 /* AppDelegate.m */; };
 		2C7F0AD51EFA9FBC0008DA99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C7F0AD31EFA9FBC0008DA99 /* Main.storyboard */; };
@@ -50,6 +52,9 @@
 		2C04BA971EFAAC7A003024F8 /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
 		2C04BA9B1EFAACBA003024F8 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
 		2C04BA9C1EFAACBA003024F8 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		2C314F351EFC8A600063D828 /* ProductCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCollectionViewCell.h; sourceTree = "<group>"; };
+		2C314F361EFC8A600063D828 /* ProductCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCollectionViewCell.m; sourceTree = "<group>"; };
+		2C314F371EFC8A600063D828 /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		2C7F0AC71EFA9FBC0008DA99 /* Desafio FullLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desafio FullLab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7F0ACB1EFA9FBC0008DA99 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2C7F0ACD1EFA9FBC0008DA99 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -171,6 +176,9 @@
 		2C04BA841EFAAAE5003024F8 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				2C314F351EFC8A600063D828 /* ProductCollectionViewCell.h */,
+				2C314F361EFC8A600063D828 /* ProductCollectionViewCell.m */,
+				2C314F371EFC8A600063D828 /* ProductCollectionViewCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -374,6 +382,7 @@
 			files = (
 				2C7F0ADA1EFA9FBC0008DA99 /* LaunchScreen.storyboard in Resources */,
 				2C7F0AD71EFA9FBC0008DA99 /* Assets.xcassets in Resources */,
+				2C314F391EFC8A600063D828 /* ProductCollectionViewCell.xib in Resources */,
 				2C7F0AD51EFA9FBC0008DA99 /* Main.storyboard in Resources */,
 				2C8569841EFC80E100503CB6 /* CategoryTableViewCell.xib in Resources */,
 			);
@@ -436,6 +445,7 @@
 			files = (
 				2C9EED7B1EFBD05D002FD2AA /* ProductSku.m in Sources */,
 				2C8569871EFC885B00503CB6 /* BaseViewController.m in Sources */,
+				2C314F381EFC8A600063D828 /* ProductCollectionViewCell.m in Sources */,
 				2C8569831EFC80E100503CB6 /* CategoryTableViewCell.m in Sources */,
 				2C7F0ACF1EFA9FBC0008DA99 /* AppDelegate.m in Sources */,
 				2C9EED8B1EFBD481002FD2AA /* ProductSkuReferenceId.m in Sources */,
