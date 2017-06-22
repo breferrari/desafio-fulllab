@@ -7,10 +7,15 @@
 //
 
 #import "CategoriesViewController.h"
+#import "CategoryTableViewCell.h"
 
 #import "FulllabService.h"
 
-@interface CategoriesViewController ()
+@interface CategoriesViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (nonatomic, strong) NSMutableArray<Category *> *dataSource;
 
 @end
 
@@ -19,25 +24,51 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [FulllabService getCategories:^(NSArray<Category *> *categories, NSError *error) {
-        NSLog(@"Complete");
-    }];
+    UINib *categoryTableViewCell = [UINib nibWithNibName:@"CategoryTableViewCell" bundle:nil];
+    [self.tableView registerNib:categoryTableViewCell forCellReuseIdentifier: [CategoryTableViewCell cellIdentifier]];
     
+    [self loadCategories];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)loadCategories {
+    __typeof(self) weakSelf = self;
+    
+    [weakSelf showLoadingHUD];
+    [FulllabService getCategories:^(NSArray<Category *> *categories, NSError *error) {
+        if (error) {
+            NSLog(@"[CategoriesViewController] Error loading categories");
+            [weakSelf hideLoadingHUD];
+            return;
+        }
+        
+        if (categories) {
+            weakSelf.dataSource = [NSMutableArray new];
+            [weakSelf.dataSource addObjectsFromArray:categories];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [weakSelf.tableView reloadData];
+                [weakSelf hideLoadingHUD];
+            });
+        }
+    }];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - UITableView
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataSource.count;
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    Category *item = [self.dataSource objectAtIndex:indexPath.row];
+    
+    NSString *cellIdentifier = [CategoryTableViewCell cellIdentifier];
+    CategoryTableViewCell *cell = (CategoryTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    [cell setCategory:item];
+    
+    return cell;
+}
+
 
 @end

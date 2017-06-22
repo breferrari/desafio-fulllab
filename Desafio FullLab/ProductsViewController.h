@@ -6,8 +6,8 @@
 //  Copyright © 2017 Brenno Ferrari. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface ProductsViewController : UIViewController
+@interface ProductsViewController : BaseViewController
 
 @end
