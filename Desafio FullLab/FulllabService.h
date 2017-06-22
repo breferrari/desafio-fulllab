@@ -10,8 +10,19 @@
 
 #import "REST.h"
 
+#import "Product.h"
+#import "Category.h"
+
 typedef void (^ServiceResultBlock)(id response, NSError *error);
 
+typedef void (^ServiceResultProductsBlock)(NSArray<Product *> *products, NSError *error);
+typedef void (^ServiceResultCategoriesBlock)(NSArray<Category *> *categories, NSError *error);
+
 @interface FulllabService : NSObject
+
++ (void)queryProducts:(NSString *)query
+               offset:(NSInteger)offset
+                 size:(NSInteger)size
+             complete:(ServiceResultProductsBlock)complete;
 
 @end

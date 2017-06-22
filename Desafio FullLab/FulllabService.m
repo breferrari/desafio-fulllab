@@ -56,4 +56,31 @@ parameters:(NSDictionary *) parameters
 
 #pragma mark - Service
 
++ (void)queryProducts:(NSString *)query
+               offset:(NSInteger)offset
+                 size:(NSInteger)size
+             complete:(ServiceResultProductsBlock)complete {
+    
+    NSString *URLString = @"/Search/Criteria";
+    
+    NSDictionary *parameters = @{
+                                 @"Query"  : query,
+                                 @"Offset" : [@(offset) stringValue],
+                                 @"Size"   : [@(size) stringValue]
+                                 };
+    
+    NSLog(@"[Fulllab Service] POST Request: %@", URLString);
+    NSLog(@"[HomerService] Querying products...");
+    
+    [FulllabService POST:URLString parameters:parameters complete:^(id response, NSError *error) {
+        if (!error && response) {
+            
+        } else {
+            NSLog(@"[Fulllab Service] Error @ POST Request: %@", URLString);
+            complete(nil, error);
+        }
+    }];
+    
+}
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "ProductsViewController.h"
+#import "FulllabService.h"
 
 @interface ProductsViewController ()
 
@@ -16,7 +17,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [FulllabService queryProducts:nil
+                           offset:0
+                             size:10
+                         complete:^(NSArray<Product *> *products, NSError *error) {
+                               //
+                             }];
+    
 }
 
 - (void)didReceiveMemoryWarning {
