@@ -10,4 +10,7 @@
 
 @interface BaseModel : NSObject
 
++ (instancetype)newWithDictionary:(NSDictionary *)dictionary;
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
 @end

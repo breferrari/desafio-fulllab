@@ -6,9 +6,9 @@
 //  Copyright © 2017 Brenno Ferrari. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "BaseModel.h"
 
-@interface ProductSpecifications : NSObject
+@interface ProductSpecifications : BaseModel
 
 @property (strong, nonatomic) NSString *weightAndDimensions;
 @property (strong, nonatomic) NSString *otherDetails;

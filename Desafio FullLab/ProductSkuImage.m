@@ -10,4 +10,15 @@
 
 @implementation ProductSkuImage
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+    self = [super init];
+    if (!self || !dictionary) return nil;
+    
+    self.url = [dictionary valueForKey:@"ImageUrl"];
+    self.tag = [dictionary valueForKey:@"ImageTag"];
+    self.label = [dictionary valueForKey:@"Label"];
+    
+    return self;
+}
+
 @end

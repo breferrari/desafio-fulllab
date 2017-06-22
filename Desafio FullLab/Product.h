@@ -27,4 +27,7 @@
 @property (strong, nonatomic) NSArray<NSString *> *images;
 @property (strong, nonatomic) NSString *realId;
 
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
 @end

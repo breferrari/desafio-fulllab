@@ -80,9 +80,14 @@ parameters:(NSDictionary *) parameters
             NSDictionary *responseDictionary = response;
             NSArray<NSDictionary *> *productDictionaryArray = [responseDictionary valueForKey:@"Products"];
             
+            NSMutableArray<Product *> *productArray = [NSMutableArray new];
+            
             for (NSDictionary *productDictionary in productDictionaryArray) {
-                NSLog(@"Name: %@", [productDictionary valueForKey:@"Name"]);
+                Product *product = [Product newWithDictionary:productDictionary];
+                [productArray addObject:product];
             }
+            
+            complete(productArray, nil);
         } else {
             NSLog(@"[Fulllab Service] Error @ POST Request: %@", URLString);
             complete(nil, error);

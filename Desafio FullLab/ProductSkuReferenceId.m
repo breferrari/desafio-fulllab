@@ -10,4 +10,14 @@
 
 @implementation ProductSkuReferenceId
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+    self = [super init];
+    if (!self || !dictionary) return nil;
+    
+    self.key = [dictionary valueForKey:@"Key"];
+    self.value = [dictionary valueForKey:@"Value"];
+    
+    return self;
+}
+
 @end

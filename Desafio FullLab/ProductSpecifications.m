@@ -10,4 +10,13 @@
 
 @implementation ProductSpecifications
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+    self = [super init];
+    if (!self || !dictionary) return nil;
+    
+    // Objeto varia, não tenho como mapear sem saber todas as variáveis possíveis
+    
+    return self;
+}
+
 @end

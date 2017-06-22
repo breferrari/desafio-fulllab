@@ -6,14 +6,14 @@
 //  Copyright © 2017 Brenno Ferrari. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "BaseModel.h"
 
 #import "ProductSkuSeller.h"
 #import "ProductSkuImage.h"
 #import "ProductSkuVariations.h"
 #import "ProductSkuReferenceId.h"
 
-@interface ProductSku : NSObject
+@interface ProductSku : BaseModel
 
 @property (strong, nonatomic) NSString *productId;
 @property (strong, nonatomic) NSString *name;

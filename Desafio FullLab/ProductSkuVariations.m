@@ -10,4 +10,14 @@
 
 @implementation ProductSkuVariations
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+    self = [super init];
+    if (!self || !dictionary) return nil;
+    
+    self.color = [dictionary valueForKey:@"Cor"];
+    self.size = [dictionary valueForKey:@"Tamanho"];
+    
+    return self;
+}
+
 @end

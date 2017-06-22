@@ -6,8 +6,12 @@
 //  Copyright © 2017 Brenno Ferrari. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "BaseModel.h"
 
-@interface ProductSkuImage : NSObject
+@interface ProductSkuImage : BaseModel
+
+@property (strong, nonatomic) NSString *url;
+@property (strong, nonatomic) NSString *tag;
+@property (strong, nonatomic) NSString *label;
 
 @end

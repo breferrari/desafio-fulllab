@@ -10,4 +10,15 @@
 
 @implementation BaseModel
 
++ (instancetype)newWithDictionary:(NSDictionary *)dictionary {
+    return [[self alloc] initWithDictionary:dictionary];
+}
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+    self = [super init];
+    if (!self || !dictionary) return nil;
+    
+    return self;
+}
+
 @end
