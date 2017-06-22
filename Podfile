@@ -8,16 +8,11 @@ def networking
     pod 'SDWebImage'
 end
 
-def models
-    pod 'JSONModel', '~> 1.7'
-end
-
 def user_interface
     pod 'SVProgressHUD'
 end
 
 target 'Desafio FullLab' do
     networking
-    models
     user_interface
 end
