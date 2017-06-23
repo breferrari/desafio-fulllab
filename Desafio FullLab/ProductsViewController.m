@@ -124,7 +124,6 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
-    NSLog(@"Height: %f", screenBounds.size.height);
     
     CGFloat cellWidth = (screenBounds.size.width / 2) - 5;
     CGFloat cellHeight = (screenBounds.size.height / 2) + 10;
