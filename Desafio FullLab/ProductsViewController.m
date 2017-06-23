@@ -106,12 +106,16 @@
                                  [weakSelf.dataSource addObjectsFromArray:products];
                                  
                                  self.currentOffset += self.querySize;
-                                 
-                                 dispatch_async(dispatch_get_main_queue(), ^{
-                                     [weakSelf.collectionView reloadData];
-                                     [weakSelf hideLoadingHUD];
-                                 });
+                             
+                             } else {
+                                 self.currentOffset = 0;
+                                 weakSelf.dataSource = [NSMutableArray new];
                              }
+                             
+                             dispatch_async(dispatch_get_main_queue(), ^{
+                                 [weakSelf.collectionView reloadData];
+                                 [weakSelf hideLoadingHUD];
+                             });
                          }];
 }
 
@@ -124,6 +128,7 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
+    NSLog(@"Height: %f", screenBounds.size.height);
     
     CGFloat cellWidth = (screenBounds.size.width / 2) - 5;
     CGFloat cellHeight = (screenBounds.size.height / 2) + 10;
