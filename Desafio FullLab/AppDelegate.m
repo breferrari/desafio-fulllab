@@ -66,4 +66,15 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - APS Payload
+
+- (void) application:(UIApplication*)application didReceiveRemoteNotification:(NSDictionary*) userInfo {
+    NSLog(@"[Push Notification] %@", [userInfo objectForKey:@"aps"]);
+}
+
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    NSLog(@"[Push Notification] Received: %@", userInfo);
+}
+
 @end
