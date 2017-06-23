@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="275" height="329"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gun-PA-L88">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gun-PA-L88">
                         <rect key="frame" x="30" y="57" width="215" height="149"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="149" id="fIE-Zm-bnX"/>
@@ -61,6 +61,12 @@
                 <constraint firstItem="FOK-FU-0Dk" firstAttribute="top" secondItem="zOY-ys-YCe" secondAttribute="bottom" constant="4" id="yST-sZ-GNf"/>
             </constraints>
             <size key="customSize" width="275" height="329"/>
+            <connections>
+                <outlet property="discountedPriceLabel" destination="zOY-ys-YCe" id="iWo-zu-BCD"/>
+                <outlet property="imageView" destination="gun-PA-L88" id="bfL-vr-ZVd"/>
+                <outlet property="installmentsLabel" destination="FOK-FU-0Dk" id="TAi-Li-pPV"/>
+                <outlet property="realPriceLabel" destination="fSI-FZ-w3w" id="rwd-tC-9zf"/>
+            </connections>
             <point key="canvasLocation" x="146.5" y="193.5"/>
         </collectionViewCell>
     </objects>

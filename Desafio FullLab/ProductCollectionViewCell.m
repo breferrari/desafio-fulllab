@@ -8,6 +8,18 @@
 
 #import "ProductCollectionViewCell.h"
 
+#import <AFNetworking/UIImageView+AFNetworking.h>
+
+@interface ProductCollectionViewCell ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *realPriceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *discountedPriceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *installmentsLabel;
+
+
+@end
+
 @implementation ProductCollectionViewCell
 
 #pragma mark - Class Method
@@ -29,7 +41,11 @@
 #pragma mark - Setter
 
 - (void)setProduct:(Product *)product {
+    ProductSku *sku = product.skus.firstObject;
     
+    ProductSkuImage *skuImage = sku.images.firstObject;
+    NSURL *imageURL = [NSURL URLWithString:skuImage.url];
+    [self.imageView setImageWithURL:imageURL];
 }
 
 @end
