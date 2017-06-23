@@ -8,7 +8,9 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
+#import <UserNotifications/UserNotifications.h>
+
+@interface AppDelegate () <UNUserNotificationCenterDelegate>
 
 @end
 
@@ -16,8 +18,25 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [self registerForNotifications:application];
+    
     return YES;
+}
+
+- (void)registerForNotifications:(UIApplication *)application {
+    UNUserNotificationCenter *userNotificationCenter = [UNUserNotificationCenter currentNotificationCenter];
+    userNotificationCenter.delegate = self;
+    
+    
+    
+    [userNotificationCenter requestAuthorizationWithOptions: UNAuthorizationOptionBadge | UNAuthorizationOptionSound | UNAuthorizationOptionAlert
+                                          completionHandler:^(BOOL granted, NSError * _Nullable error) {
+                                              if (!error)
+                                                  dispatch_async(dispatch_get_main_queue(), ^{
+                                                      [[UIApplication sharedApplication] registerForRemoteNotifications];
+                                                  });
+                                          }];
 }
 
 
@@ -46,6 +65,5 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
 
 @end
