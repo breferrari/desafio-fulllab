@@ -16,10 +16,12 @@
 
 - (void)showLoadingHUD {
     [SVProgressHUD show];
+    self.navigationItem.rightBarButtonItem.enabled = NO;
 }
 
 - (void)hideLoadingHUD {
     [SVProgressHUD dismiss];
+    self.navigationItem.rightBarButtonItem.enabled = YES;
 }
 
 @end

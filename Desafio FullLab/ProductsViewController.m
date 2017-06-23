@@ -26,23 +26,65 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self addFilterButtton];
     
     UINib *productCollectionViewCell = [UINib nibWithNibName:@"ProductCollectionViewCell" bundle:nil];
     [self.collectionView registerNib:productCollectionViewCell forCellWithReuseIdentifier:[ProductCollectionViewCell cellIdentifier]];
     
     self.currentOffset = 0;
     self.querySize = 50;
-    [self loadProducts:nil];
+    [self loadProducts];
 }
 
-- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+- (void)addFilterButtton {
+    UIBarButtonItem *filterButton = [[UIBarButtonItem alloc] initWithTitle:@"Busca" style:UIBarButtonItemStylePlain target:self action:@selector(showFilterAlert)];
+    self.navigationItem.rightBarButtonItem = filterButton;
+}
+
+- (void)showFilterAlert {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"O que você gostaria de buscar?"
+                                                                   message:nil
+                                                            preferredStyle:UIAlertControllerStyleAlert];
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.collectionView reloadData];
-    });
+    [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.placeholder = @"Digite um produto";
+    }];
+    
+    UIAlertAction* notNowAction = [UIAlertAction actionWithTitle:@"Agora não"
+                                                           style:UIAlertActionStyleDefault
+                                                         handler:^(UIAlertAction * action) {
+                                                             [alert dismissViewControllerAnimated:YES completion:nil];
+                                                         }];
+    [alert addAction:notNowAction];
+    
+    UIAlertAction* filterAction = [UIAlertAction actionWithTitle:@"Buscar"
+                                                         style:UIAlertActionStyleDefault
+                                                       handler:^(UIAlertAction * action) {
+                                                           self.query = alert.textFields.lastObject.text;
+                                                       }];
+    [alert addAction:filterAction];
+    
+    [self presentViewController:alert animated:YES completion:^{
+        [alert.textFields.lastObject becomeFirstResponder];
+    }];
 }
 
-- (void)loadProducts:(NSString *)query {
+- (void)setQuery:(NSString *)query {
+    _query = query;
+    
+    if (_query)
+        self.title = _query;
+    
+    if (!_query || [_query isEqualToString:@""])
+        self.title = @"Produtos";
+    
+    self.currentOffset = 0;
+    if (self.dataSource)
+        [self.dataSource removeAllObjects];
+    [self loadProducts];
+}
+
+- (void)loadProducts {
     __typeof(self) weakSelf = self;
     
     [self showLoadingHUD];
@@ -94,7 +136,7 @@
     if ([cell isKindOfClass:[ProductCollectionViewCell class]]) {
         
         if (indexPath.row == self.dataSource.count - 1) {
-            [self loadProducts:self.query];
+            [self loadProducts];
         }
         
     }
