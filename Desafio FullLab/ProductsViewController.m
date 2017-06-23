@@ -30,6 +30,13 @@
     [self loadProducts];
 }
 
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.collectionView reloadData];
+    });
+}
+
 - (void)loadProducts {
     __typeof(self) weakSelf = self;
     
@@ -65,8 +72,10 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
+    NSLog(@"Height: %f", screenBounds.size.height);
+    
     CGFloat cellWidth = (screenBounds.size.width / 2) - 5;
-    CGFloat cellHeight = (screenBounds.size.height / 2) - 50;
+    CGFloat cellHeight = (screenBounds.size.height / 2) + 10;
     
     return CGSizeMake(cellWidth, cellHeight);
 }
