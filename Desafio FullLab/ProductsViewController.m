@@ -32,7 +32,7 @@
     [self.collectionView registerNib:productCollectionViewCell forCellWithReuseIdentifier:[ProductCollectionViewCell cellIdentifier]];
     
     self.currentOffset = 0;
-    self.querySize = 50;
+    self.querySize = 10;
     [self loadProducts];
 }
 
