@@ -14,7 +14,7 @@
     self = [super init];
     if (!self || !dictionary) return nil;
     
-    self.availability = [dictionary valueForKey:@"Availability"];
+    self.availability = [dictionary objectForKey:@"Availability"];
     
     NSMutableArray<ProductSku *> *skusArray = [NSMutableArray new];
     NSArray<NSDictionary *> *skusDictionary = [dictionary valueForKey:@"Skus"];
@@ -29,28 +29,34 @@
     self.productDescription = [dictionary valueForKey:@"Description"];
     self.category = [dictionary valueForKey:@"Category"];
     
-    NSMutableArray<NSString *> *categoriesArray = [NSMutableArray new];
-    NSArray<NSDictionary *> *categoriesDictionary = [dictionary valueForKey:@"Categories"];
-    for (NSString *category in categoriesDictionary) {
-        [categoriesArray addObject:category];
+    if ([dictionary objectForKey:@"Categories"] != [NSNull null]) {
+        NSMutableArray<NSString *> *categoriesArray = [NSMutableArray new];
+        NSArray<NSDictionary *> *categoriesDictionary = [dictionary valueForKey:@"Categories"];
+        for (NSString *category in categoriesDictionary) {
+            [categoriesArray addObject:category];
+        }
+        self.categories = categoriesArray;
     }
-    self.categories = categoriesArray;
     
     self.specifications = [ProductSpecifications newWithDictionary:[dictionary valueForKey:@"Specifications"]];
     
-    NSMutableArray<NSString *> *variationsArray = [NSMutableArray new];
-    NSArray<NSDictionary *> *variationsDictionary = [dictionary valueForKey:@"Variations"];
-    for (NSString *variation in variationsDictionary) {
-        [variationsArray addObject:variation];
+    if ([dictionary objectForKey:@"Variations"] != [NSNull null]) {
+        NSMutableArray<NSString *> *variationsArray = [NSMutableArray new];
+        NSArray<NSDictionary *> *variationsDictionary = [dictionary valueForKey:@"Variations"];
+        for (NSString *variation in variationsDictionary) {
+            [variationsArray addObject:variation];
+        }
+        self.variations = variationsArray;
     }
-    self.variations = variationsArray;
     
-    NSMutableArray<NSString *> *videosArray = [NSMutableArray new];
-    NSArray<NSDictionary *> *videosDictionary = [dictionary valueForKey:@"Videos"];
-    for (NSString *video in videosDictionary) {
-        [videosArray addObject:video];
+    if ([dictionary objectForKey:@"Videos"] != [NSNull null]) {
+        NSMutableArray<NSString *> *videosArray = [NSMutableArray new];
+        NSArray<NSDictionary *> *videosDictionary = [dictionary valueForKey:@"Videos"];
+        for (NSString *video in videosDictionary) {
+            [videosArray addObject:video];
+        }
+        self.videos = videosArray;
     }
-    self.videos = videosArray;
     
     if ([dictionary objectForKey:@"Images"] != [NSNull null]) {
         NSMutableArray<NSString *> *imagesArray = [NSMutableArray new];

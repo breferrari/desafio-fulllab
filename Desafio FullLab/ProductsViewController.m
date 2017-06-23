@@ -14,8 +14,11 @@
 @interface ProductsViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-
 @property (nonatomic, strong) NSMutableArray<Product *> *dataSource;
+
+@property (nonatomic, strong) NSString *query;
+@property (nonatomic, readwrite) NSInteger currentOffset;
+@property (nonatomic, readwrite) NSInteger querySize;
 
 @end
 
@@ -27,7 +30,9 @@
     UINib *productCollectionViewCell = [UINib nibWithNibName:@"ProductCollectionViewCell" bundle:nil];
     [self.collectionView registerNib:productCollectionViewCell forCellWithReuseIdentifier:[ProductCollectionViewCell cellIdentifier]];
     
-    [self loadProducts];
+    self.currentOffset = 0;
+    self.querySize = 50;
+    [self loadProducts:nil];
 }
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
@@ -37,13 +42,13 @@
     });
 }
 
-- (void)loadProducts {
+- (void)loadProducts:(NSString *)query {
     __typeof(self) weakSelf = self;
     
     [self showLoadingHUD];
-    [FulllabService queryProducts:nil
-                           offset:0
-                             size:10
+    [FulllabService queryProducts:self.query
+                           offset:self.currentOffset
+                             size:self.querySize
                          complete:^(NSArray<Product *> *products, NSError *error) {
                              if (error || !products) {
                                  NSLog(@"[ProductsViewController] Error loading categories");
@@ -51,9 +56,14 @@
                                  return;
                              }
                              
-                             if (products) {
-                                 weakSelf.dataSource = [NSMutableArray new];
+                             if (products && products.count > 0) {
+                                 
+                                 if (!weakSelf.dataSource)
+                                     weakSelf.dataSource = [NSMutableArray new];
+                                 
                                  [weakSelf.dataSource addObjectsFromArray:products];
+                                 
+                                 self.currentOffset += self.querySize;
                                  
                                  dispatch_async(dispatch_get_main_queue(), ^{
                                      [weakSelf.collectionView reloadData];
@@ -78,6 +88,16 @@
     CGFloat cellHeight = (screenBounds.size.height / 2) + 10;
     
     return CGSizeMake(cellWidth, cellHeight);
+}
+
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
+    if ([cell isKindOfClass:[ProductCollectionViewCell class]]) {
+        
+        if (indexPath.row == self.dataSource.count - 1) {
+            [self loadProducts:self.query];
+        }
+        
+    }
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
